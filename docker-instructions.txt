@@ -1,0 +1,5 @@
+docker build -t sisap24/lmi . -t "sisap24-lmi"
+
+## running
+
+ocker run --cpus=54 -v /home/sisap23evaluation/data2024:/app/data2024:ro -v ./result:/app/result -it sisap24/lmi bash
