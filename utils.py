@@ -71,7 +71,7 @@ def get_dataset_size(dataset: Path) -> int:
 
 
 def load_queries() -> Tensor:
-    queries_path = Path('data2024/private-queries-2024-laion2B-en-clip768v2-n=10k.h5')
+    queries_path = Path('data2024/private-queries-2024-laion2B-en-clip768v2-n=10k-epsilon=0.2.h5')
     return torch.from_numpy(h5py.File(queries_path, 'r')['emb'][:]).to(torch.float32)  # type: ignore
 
 
